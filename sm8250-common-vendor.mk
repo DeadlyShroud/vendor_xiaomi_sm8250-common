@@ -692,6 +692,9 @@ PRODUCT_PACKAGES += \
     libmlipay \
     libmlipay@1.1 \
     libslimclient \
+    libqcbassboost \
+    libqcreverb \
+    libqcvirt \
     vendor.qti.gnss@4.0-service \
     SoterService \
     android.hardware.gnss@2.1-service-qti.xml \
