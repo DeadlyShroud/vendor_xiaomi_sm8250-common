@@ -585,6 +585,45 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libadsp_default_listener",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libadsp_default_listener.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libadsprpc",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libadsp_default_listener.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libadsprpc",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libadsprpc",
     owner: "xiaomi",
     strip: {
@@ -662,6 +701,45 @@ cc_prebuilt_library_shared {
                 "libgsl",
                 "libcutils",
                 "libutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcdsp_default_listener",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libcdsp_default_listener.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcdsprpc",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libcdsp_default_listener.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcdsprpc",
                 "libc++",
                 "libc",
                 "libm",
@@ -5878,32 +5956,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libadsp_default_listener",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libadsp_default_listener.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libadsprpc",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libaoa",
     owner: "xiaomi",
     strip: {
@@ -6099,32 +6151,6 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libgps.utils",
                 "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libcdsp_default_listener",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libcdsp_default_listener.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcdsprpc",
                 "libc++",
                 "libc",
                 "libm",
@@ -6491,6 +6517,40 @@ cc_prebuilt_library_shared {
                 "libhardware_legacy",
                 "libhardware",
                 "com.qualcomm.qti.dpm.api@1.0_vendor",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdpps",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libdpps.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libdisp-aba",
+                "libqdutils",
+                "libutils",
+                "liblog",
+                "libbinder",
+                "libdrm",
+                "libtinyxml2",
+                "libhidlbase",
+                "android.frameworks.sensorservice@1.0",
                 "libc++",
                 "libc",
                 "libm",
@@ -13600,6 +13660,37 @@ prebuilt_etc_xml {
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "chargeonlymode",
+    owner: "xiaomi",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system/bin/chargeonlymode",
+            ],
+            shared_libs: [
+                "libbase",
+                "libcutils",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libpng",
+                "android.hardware.health@2.0",
+                "android.hardware.health@2.1",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
 }
 
 cc_prebuilt_binary {
