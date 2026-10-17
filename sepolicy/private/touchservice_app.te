@@ -1,5 +1,5 @@
 app_domain(touchservice_app)
-
+allow touchservice_app sysfs_htsr:file rw_file_perms;
 binder_use(touchservice_app)
 
 allow touchservice_app {
@@ -40,5 +40,4 @@ allow touchservice_app system_app_data_file:{
   lnk_file
 } create_file_perms;
 
-binder_call(touchservice_app, default_android_hwservice)
 binder_call(touchservice_app, gpuservice)
