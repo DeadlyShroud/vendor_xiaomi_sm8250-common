@@ -370,6 +370,7 @@ PRODUCT_PACKAGES += \
     libminkdescriptor \
     libminksocket \
     libmodemapi \
+    libnanopb \
     libnetmgr \
     libnetmgr_common \
     libnetmgr_nr_fusion \
