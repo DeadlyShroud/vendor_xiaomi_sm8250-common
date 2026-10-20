@@ -181,7 +181,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.bluetooth_audio@2.0-impl \
     libFileMux_proprietary \
     libacdb-fts \
-    libacdbloader \
     libacdbrtac \
     libadiertac \
     libadm \
