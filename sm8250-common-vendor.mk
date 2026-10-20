@@ -97,6 +97,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm8250-common/proprietary/vendor/etc/init/vendor.qti.tftp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.tftp.rc \
     vendor/xiaomi/sm8250-common/proprietary/vendor/etc/init/vendor.xiaomi.hardware.citsensorservice@1.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.citsensorservice@1.1-service.rc \
     vendor/xiaomi/sm8250-common/proprietary/vendor/etc/init/vendor.xiaomi.hardware.touchfeature@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.touchfeature@1.0-service.rc \
+    vendor/xiaomi/sm8250-common/proprietary/vendor/etc/init/vendor.xiaomi.hardware.vibratorfeature.service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.vibratorfeature.service.rc \
+    vendor/xiaomi/sm8250-common/proprietary/vendor/etc/init/vendor.xiaomi.hardware.vibratorfeature@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.vibratorfeature@1.0-service.rc \
     vendor/xiaomi/sm8250-common/proprietary/vendor/etc/init/vppservice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vppservice.rc \
     vendor/xiaomi/sm8250-common/proprietary/vendor/etc/izat.conf:$(TARGET_COPY_OUT_VENDOR)/etc/izat.conf \
     vendor/xiaomi/sm8250-common/proprietary/vendor/etc/lowi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/lowi.conf \
@@ -417,6 +419,7 @@ PRODUCT_PACKAGES += \
     vendor.display.color@1.4 \
     vendor.display.color@1.5 \
     vendor.display.postproc@1.0 \
+    vendor.hardware.vibratorfeature.IVibratorExt-V1-ndk_platform \
     vendor.qti.data.factory@2.0 \
     vendor.qti.data.factory@2.1 \
     vendor.qti.data.factory@2.2 \
@@ -497,6 +500,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.latency@2.1 \
     vendor.xiaomi.hardware.citsensorservice@1.0 \
     vendor.xiaomi.hardware.citsensorservice@1.1 \
+    vendor.xiaomi.hardware.vibratorfeature@1.0 \
     vendor_lib_rfsa_adsp_capi_v2_aptX_CLHDADV_Encoder_so \
     vendor_lib_rfsa_adsp_capi_v2_aptX_CLHDAD_Speech_Decoder_so \
     com.qualcomm.qti.dpm.api@1.0 \
@@ -556,6 +560,7 @@ PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3-service-qti.xml \
     c2_manifest_vendor.xml \
     manifest_android.hardware.drm@1.3-service.widevine.xml \
+    vendor.xiaomi.hardware.vibratorfeature.service.xml \
     ATFWD-daemon \
     adpl \
     adsprpcd \
@@ -584,6 +589,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.secure_element@1.2-service \
     vendor.xiaomi.hardware.citsensorservice@1.1-service \
     vendor.xiaomi.hardware.touchfeature@1.0-service \
+    vendor.xiaomi.hardware.vibratorfeature.service \
     ims_rtp_daemon \
     imsdatadaemon \
     imsqmidaemon \
