@@ -421,6 +421,7 @@ PRODUCT_PACKAGES += \
     libsoc_helper \
     libspcom \
     libspl \
+    libssccalapi \
     libssd \
     libsystem_health_mon \
     libtime_genoff \
