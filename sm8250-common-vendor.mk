@@ -96,6 +96,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm8250-common/proprietary/vendor/etc/init/vendor.qti.secure_element@1.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.secure_element@1.2-service.rc \
     vendor/xiaomi/sm8250-common/proprietary/vendor/etc/init/vendor.qti.tftp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.tftp.rc \
     vendor/xiaomi/sm8250-common/proprietary/vendor/etc/init/vendor.xiaomi.hardware.citsensorservice@1.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.citsensorservice@1.1-service.rc \
+    vendor/xiaomi/sm8250-common/proprietary/vendor/etc/init/vendor.xiaomi.hardware.displayfeature@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.displayfeature@1.0-service.rc \
     vendor/xiaomi/sm8250-common/proprietary/vendor/etc/init/vendor.xiaomi.hardware.touchfeature@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.touchfeature@1.0-service.rc \
     vendor/xiaomi/sm8250-common/proprietary/vendor/etc/init/vppservice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vppservice.rc \
     vendor/xiaomi/sm8250-common/proprietary/vendor/etc/izat.conf:$(TARGET_COPY_OUT_VENDOR)/etc/izat.conf \
@@ -151,8 +152,10 @@ PRODUCT_PACKAGES += \
     libOpenCL \
     libVkLayer_q3dtools \
     libadreno_utils \
+    libadsp_default_listener \
     libadsprpc \
     libc2d30_bltlib \
+    libcdsp_default_listener \
     libcdsprpc \
     libdiag \
     libfastcvdsp_stub \
@@ -279,6 +282,7 @@ PRODUCT_PACKAGES += \
     deviceInfoServiceModule \
     android.hardware.bluetooth@1.0-impl-qti \
     android.hardware.gatekeeper@1.0-impl-qti \
+    displayfeature.default \
     vendor.qti.esepowermanager@1.1-impl \
     vendor.qti.hardware.alarm@1.0-impl \
     vendor.qti.hardware.bluetooth_sar@1.1-impl \
@@ -289,6 +293,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.qteeconnector@1.0-impl \
     vendor.qti.hardware.soter@1.0-impl \
     vendor.xiaomi.hardware.citsensorservice@1.1-impl \
+    vendor.xiaomi.hardware.displayfeature@1.0-impl \
     vendor.xiaomi.hardware.touchfeature@1.0-impl \
     jcos_nq_client \
     lib-imscmservice \
@@ -313,7 +318,6 @@ PRODUCT_PACKAGES += \
     libQTEEConnector_vendor \
     libSecureUILib \
     libStDrvInt \
-    libadsp_default_listener \
     libaoa \
     libasn1cper \
     libasn1crt \
@@ -322,8 +326,8 @@ PRODUCT_PACKAGES += \
     libcacertclient \
     libcdfw \
     libcdfw_remote_api \
-    libcdsp_default_listener \
     libcdsprpc_system \
+    libclient2slpi.notifier \
     libcne \
     libcneapiclient \
     libcneoplookup \
@@ -332,9 +336,12 @@ PRODUCT_PACKAGES += \
     libcpion \
     libdataitems \
     libdisp-aba \
+    libdisplayfeature \
+    libdisplayfeatureservice \
     libdisplayqos \
     libdisplayskuutils \
     libdpmqmihal \
+    libdpps \
     libdrmfs \
     libdrmtime \
     libdsi_netctrl \
@@ -437,6 +444,9 @@ PRODUCT_PACKAGES += \
     qtibus \
     qtimutex \
     se_nq_extn_client \
+    libqcbassboost \
+    libqcreverb \
+    libqcvirt \
     unnhal-acc-adreno \
     unnhal-acc-common \
     unnhal-acc-hta \
@@ -585,14 +595,15 @@ PRODUCT_PACKAGES += \
     qcrilhook \
     android.hardware.neuralnetworks@1.3-service-qti-hta.xml \
     android.hardware.neuralnetworks@1.3-service-qti.xml \
-    c2_manifest_vendor.xml \
     manifest_android.hardware.drm@1.3-service.widevine.xml \
+    chargeonlymode \
     ATFWD-daemon \
     adpl \
     adsprpcd \
     cdsprpcd \
     cnd \
     cnss-daemon \
+    displayfeature \
     dpmQmiMgr \
     dspservice \
     feature_enabler_client \
@@ -614,6 +625,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.media.c2@1.0-service \
     vendor.qti.secure_element@1.2-service \
     vendor.xiaomi.hardware.citsensorservice@1.1-service \
+    vendor.xiaomi.hardware.displayfeature@1.0-service \
     vendor.xiaomi.hardware.touchfeature@1.0-service \
     ims_rtp_daemon \
     imsdatadaemon \
@@ -692,9 +704,6 @@ PRODUCT_PACKAGES += \
     libmlipay \
     libmlipay@1.1 \
     libslimclient \
-    libqcbassboost \
-    libqcreverb \
-    libqcvirt \
     vendor.qti.gnss@4.0-service \
     SoterService \
     android.hardware.gnss@2.1-service-qti.xml \
